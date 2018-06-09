@@ -1,0 +1,29 @@
+.hr {
+	display: flex;
+	align-items: center;
+	margin: 2em 0;
+
+	&__title {
+		font-size: .9em;
+		font-weight: bold;
+		margin-right: 1em;
+		text-transform: uppercase;
+	}
+
+	&__wrapper {
+		flex: 1;
+
+		hr {
+			background-color: $green-light;
+		}
+	}
+
+	&__select .opm-container {
+		background-color: $black !important;
+		border: 1px solid $green-light !important;
+		border-radius: 5px !important;
+		color: $green-light !important;
+		margin-left: 1em !important;
+	}
+
+}

@@ -1,0 +1,23 @@
+
+input, select {
+	background-color: $black;
+    border: 1px solid $green-light;
+    border-radius: 1px;
+	box-sizing: border-box;
+	color: $green-light;
+	display: inline-block;
+	font-size: 14px;
+	height: 33px;
+    margin: 8px 0;
+	padding: 12px 20px;
+
+	&::placeholder {
+		color: #3e515b;
+	}
+
+	&:focus,
+	&:hover {
+		border-color: $blue;
+		color: $blue;
+	}
+}
