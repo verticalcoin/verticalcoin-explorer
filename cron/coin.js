@@ -14,31 +14,33 @@ const Coin = require('../model/coin');
  */
 async function syncCoin() {
   const date = moment().utc().startOf('minute').toDate();
-  // Setup the coinmarketcap.com api url.
-  const url = `${ config.coinMarketCap.api }${ config.coinMarketCap.ticker }`;
+  const url = 'https://api.crypto-bridge.org/api/v1/ticker';
 
   const info = await rpc.call('getinfo');
   const masternodes = await rpc.call('vnode', ['count']);
   const nethashps = await rpc.call('getnetworkhashps');
+  let cb = null;
 
-  let market = {}; // await fetch(url);
-  if (Array.isArray(market)) {
-    market = market.length ? market[0] : {};
+  // https://api.crypto-bridge.org/api/v1/ticker
+  // {"id":"VTL_BTC","last":"0.00001229","volume":"0.11468148","ask":"0.00001220","bid":"0.00000651"}
+  const tickers = await fetch(url);
+  if (tickers && Array.isArray(tickers)) {
+    cb = tickers.find(t => t.id === 'VTL_BTC');
   }
 
   const coin = new Coin({
-    cap: market.market_cap_usd || 0,
+    cap: 0,
     createdAt: date,
     blocks: info.blocks,
-    btc: market.price_btc || 0,
+    btc: cb.last || 0,
     diff: info.difficulty,
     mnsOff: 0,
     mnsOn: masternodes,
     netHash: nethashps,
     peers: info.connections,
     status: 'Online',
-    supply: market.available_supply || 0, // TODO: change to actual count from db.
-    usd: market.price_usd || 0
+    supply: 0, // TODO: change to actual count from db.
+    usd: 0
   });
 
   await coin.save();
