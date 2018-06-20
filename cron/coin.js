@@ -28,6 +28,11 @@ async function syncCoin() {
     cb = tickers.find(t => t.id === 'VTL_BTC');
   }
 
+  // https://api.coindesk.com/v1/bpi/currentprice.json
+  // Get price from coindesk.
+  const price = await fetch('https://api.coindesk.com/v1/bpi/currentprice.json');
+  const rate = price.bpi.USD.rate_float * cb.last;
+
   const coin = new Coin({
     cap: 0,
     createdAt: date,
@@ -40,7 +45,7 @@ async function syncCoin() {
     peers: info.connections,
     status: 'Online',
     supply: 0, // TODO: change to actual count from db.
-    usd: 0
+    usd: rate || 0
   });
 
   await coin.save();

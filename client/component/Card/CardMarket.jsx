@@ -42,10 +42,11 @@ export default class CardStatus extends Component {
           <CountUp
             decimals={ 2 }
             duration={ 1 }
-            end={ this.props.btc }
-            prefix={ 'BTC' }
+            end={ this.props.usd }
+            prefix={ 'VTL' }
             start={ 0 } />
         </p>
+        <p className="card__data-sub">{ this.props.btc } BTC</p>
         <div className="card__info row">
           <div className="col-sm-12 col-md-6 col-lg-4">
           </div>
