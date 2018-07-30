@@ -17,8 +17,8 @@ $white-light: rgba(255,255,255,.5);
 $margin: 1rem;
 $margin-lg: 1.5rem;
 
-$menu-gradient-main: $black;
-$menu-gradient-secondary: lighten($black, 5%);
+$menu-gradient-main: $white;
+$menu-gradient-secondary: darken($white, 5%);
 $menu-width-open: 240px;
 $menu-width-close: 110px;
 $menu-mobile-height: 70px;
@@ -51,22 +51,22 @@ $pagination-padding-y-lg:           8px;
 $pagination-padding-x-lg:           12px;
 $pagination-line-height:            1.1;
 
-$pagination-color:                  $gray;
-$pagination-bg:                     $black;
+$pagination-color:                  $blue;
+$pagination-bg:                     none;
 $pagination-border-width:           1px;
-$pagination-border-color:           $green-light;
+$pagination-border-color:           none;
 
 $pagination-hover-color:            $blue;
-$pagination-hover-bg:            	$black;
-$pagination-hover-border-color:    	$blue;
+$pagination-hover-bg:            	none;
+$pagination-hover-border-color:    	none;
 
 $pagination-active-color:           $green-light;
-$pagination-active-bg:           	$black;
+$pagination-active-bg:           	$white;
 $pagination-active-border-color:    $green-light;
 
 $pagination-disabled-color:         $gray-dark;
 $pagination-disabled-bg:            $gray-light;
-$pagination-disabled-border-color:  $gray-dark;
+$pagination-disabled-border-color:  none;
 
 @import "~bootstrap/scss/bootstrap.scss";
 @import "./sass/font";
@@ -91,13 +91,19 @@ $pagination-disabled-border-color:  $gray-dark;
 
 /* Reset */
 html, body {
-	background-color: $black;
-	color: $white;
+	background-color: $white;
+	color: $black;
     height: 100vh;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    width: 100vw;
+	width: 100vw;
+	
+	background: $menu-gradient-main;
+	background: -moz-linear-gradient(-45deg, $menu-gradient-main 1%, $menu-gradient-main 50%, $menu-gradient-secondary 80%);
+	background: -webkit-linear-gradient(-45deg, $menu-gradient-main 1%,$menu-gradient-main 50%,$menu-gradient-secondary 80%);
+	background: linear-gradient(135deg, $menu-gradient-main 1%,$menu-gradient-main 50%,$menu-gradient-secondary 80%);
+
 }
 
 a, a:visited {
@@ -145,7 +151,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-stretch: normal;
 	line-height: normal;
 	letter-spacing: normal;
-	min-width: 60%;
+	min-width: 100px;
 	mix-blend-mode: undefined;
 	padding: .2em .6em;
 	text-align: center;
@@ -189,11 +195,6 @@ h1, h2, h3, h4, h5, h6 {
 	*/
 
     &__wrapper {
-		background: $menu-gradient-main;
-		background: -moz-linear-gradient(-45deg, $menu-gradient-main 1%, $menu-gradient-main 50%, $menu-gradient-secondary 80%);
-		background: -webkit-linear-gradient(-45deg, $menu-gradient-main 1%,$menu-gradient-main 50%,$menu-gradient-secondary 80%);
-		background: linear-gradient(135deg, $menu-gradient-main 1%,$menu-gradient-main 50%,$menu-gradient-secondary 80%);
-
 	    margin: 0 auto;
 	    min-height: 80vh;
 		padding: 1em 2em 2em;

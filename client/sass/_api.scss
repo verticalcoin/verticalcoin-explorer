@@ -1,12 +1,13 @@
 
 .api {
 
-	$detail-background-color: lighten($black, 2%);
+	$detail-background-color: lighten($black, 5%);
 
 	/*@include media-breakpoint-up(md) {
 		flex-direction: column;
 	}*/
 
+	color: $black;
 	display: flex;
 	flex-direction: row;
 
@@ -33,7 +34,7 @@
 	}
 
 	&__section-sub-heading {
-		font-color: $white;
+		color: $green-light;
 	}
 
 	&__call {
@@ -111,7 +112,7 @@
 		}
 
 		background-color: $detail-background-color;
-		border-top: 1px solid $green-light;
+		/* border-top: 1px solid $green-light; */
 		flex: 1;
 	}
 

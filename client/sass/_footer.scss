@@ -1,9 +1,9 @@
 
 /* Overrides bootstrap table class */
 .footer {
-	color: $white;
+	color: $black;
 	display: flex;
-	background-color: $black;
+	background-color: none;
 	border-top: 1px solid rgba(34, 34, 34, 0.1);
 	bottom: 0;
 	flex-wrap: wrap;
@@ -14,7 +14,7 @@
 	margin: .2em -2em;
 
 	a, a:visited, a:focus {
-		color: $white;
+		color: $black;
 	}
 
     &__block {
@@ -63,14 +63,14 @@
 	}
 
 	&__social-media-icon {
-		color: $white;
+		color: $black;
 		font-size: 2em;
 		margin-right: .5em;
 		text-align: center;
 
 		&:hover,
 		&:focus {
-			color: $green-light;
+			color: $blue;
 		}
 
 	}

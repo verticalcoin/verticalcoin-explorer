@@ -1,4 +1,5 @@
 .hr {
+	color: $black;
 	display: flex;
 	align-items: center;
 	margin: 2em 0;
@@ -19,10 +20,10 @@
 	}
 
 	&__select .opm-container {
-		background-color: $black !important;
-		border: 1px solid $green-light !important;
+		background-color: $white !important;
+		border: 1px solid $black !important;
 		border-radius: 5px !important;
-		color: $green-light !important;
+		color: $black !important;
 		margin-left: 1em !important;
 	}
 

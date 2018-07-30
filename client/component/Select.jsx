@@ -7,7 +7,7 @@ class App extends Component {
     const settings = {
       style: {
         background: '#ffffff',
-        borderColor: '#e8e8e8',
+        borderColor: '#222222',
         borderRadius: 5,
         borderWidth: 1,
         padding: '5px 10px'

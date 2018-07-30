@@ -25,7 +25,7 @@ class Footer extends Component {
     return (
       <div className="footer">
         <div className="footer__block">
-          <img className="footer__logo" src="/img/vertical.png" />
+          <img className="footer__logo" src="/img/vertical2.png" />
           <span className="footer__legal">
             <div>Copyright &copy; 2018 <a href="https://bulwarkcrypto.com/">Bulwark Cryptocurrency</a></div>
             <div>Copyright &copy; 2018 <a href="https://verticalcoin.io/">Vertical Coin</a></div>
