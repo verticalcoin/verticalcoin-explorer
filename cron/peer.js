@@ -32,7 +32,7 @@ async function syncPeer() {
 
     const p = new Peer({
       _id: geoip.ip ? geoip.ip : parts[0],
-      country: geoip.country_name,
+      country: geoip.country,
       countryCode: geoip.countryCode,
       createdAt: date,
       ip: geoip.ip ? geoip.ip : parts[0],
