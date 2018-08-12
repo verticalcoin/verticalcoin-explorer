@@ -1,5 +1,5 @@
 .search {
-	color: $black;
+	color: $gray;
 	position: relative;
 	width: 100%;
 
@@ -40,13 +40,12 @@
 	}
 
 	&--mobile &__input {
-		background: transparent;
 	  	border: 1px solid $white-light;
-		color: $white;
+		color: $black;
 	}
 
 	&--mobile input.search__input::placeholder {
-		color: $white;
+		color: $black;
 	}
 
 

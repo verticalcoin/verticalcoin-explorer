@@ -17,8 +17,8 @@ $white-light: rgba(255,255,255,.5);
 $margin: 1rem;
 $margin-lg: 1.5rem;
 
-$menu-gradient-main: $white;
-$menu-gradient-secondary: darken($white, 5%);
+$menu-gradient-main: #000000;
+$menu-gradient-secondary: lighten(#000000, 5%);
 $menu-width-open: 240px;
 $menu-width-close: 110px;
 $menu-mobile-height: 70px;
@@ -91,7 +91,7 @@ $pagination-disabled-border-color:  none;
 
 /* Reset */
 html, body {
-	background-color: $white;
+	background-color: $black;
 	color: $black;
     height: 100vh;
     margin: 0;
@@ -166,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 	&-success {
-		color: $white !important;
+		color: $black !important;
 	}
 }
 

@@ -16,10 +16,10 @@
 	}
 
 	tr:nth-child(even) {
-		color: $black;
+		color: $gray;
 
 		td, a, a:visited {
-			color: $black;
+			color: $gray;
 
 			&:hover {
 				color: $blue;
@@ -28,10 +28,10 @@
 	}
 
 	tr:nth-child(odd) {
-		color: $black;
+		color: $gray-light;
 
 		td, a, a:visited {
-			color: $black;
+			color: $gray-light;
 
 			&:hover {
 				color: $blue;
@@ -40,7 +40,7 @@
 	}
 
 	th {
-		color: $blue-dark;
+		color: $blue;
 		font-size: 16px;
 		min-width: 100px;
 		padding: 10px 5px;

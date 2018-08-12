@@ -1,7 +1,7 @@
 .card {
 	background-color: transparent;
 	border: 0;
-	color: $black;
+	color: $white;
 	font-size: 16px;
 	line-height: 1.25;
 	margin-top: 16px;
@@ -16,7 +16,7 @@
 	}
 
 	&__title {
-		color: $blue-dark;
+		color: $blue;
 		padding: 10px 10px 0 10px;
 		font-family: $fontLarge;
 		font-size: 24px;
@@ -30,7 +30,7 @@
 	}
 
 	&__result {
-		color: $black;
+		color: $white;
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
@@ -48,7 +48,7 @@
 	}
 
 	&__label {
-		color: $black;
+		color: $white;
 		padding-right: 10px;
 
 		@include media-breakpoint-up(md) {
@@ -136,7 +136,7 @@
 
 	&--graph &__data-sub {
 		font-size: .8em;
-		color: $black;
+		color: $white;
 	}
 
 }

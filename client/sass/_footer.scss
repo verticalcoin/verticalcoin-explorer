@@ -1,7 +1,7 @@
 
 /* Overrides bootstrap table class */
 .footer {
-	color: $black;
+	color: $gray;
 	display: flex;
 	background-color: none;
 	border-top: 1px solid rgba(34, 34, 34, 0.1);
@@ -14,7 +14,7 @@
 	margin: .2em -2em;
 
 	a, a:visited, a:focus {
-		color: $black;
+		color: $gray;
 	}
 
     &__block {
@@ -63,7 +63,7 @@
 	}
 
 	&__social-media-icon {
-		color: $black;
+		color: $gray;
 		font-size: 2em;
 		margin-right: .5em;
 		text-align: center;
